@@ -142,7 +142,7 @@ turn left or right with set speed
 
 delay for a set of seconds
 
-***find_silver_token()***
+***find_silver_token() Pseudocode***
 
 initialize dist to 100
 
@@ -172,7 +172,7 @@ For every token seen by robot
 
 EndFor
 
-***find_golden_token()***
+***find_golden_token() Pseudocode***
 
 initialize dist to 100
 
@@ -202,7 +202,7 @@ For every token seen by robot
 
 EndFor
 
-***grab_silver_token()***
+***grab_silver_token Pseudocode***
 
 
 initialize check to 0
@@ -267,7 +267,7 @@ While check is equal to 0
 
 EndWhile
 
-***reach_golden_token()***
+***reach_golden_token() Pseudocode***
 
 initialize check to 0
 
@@ -323,7 +323,7 @@ While check is equal to 0
 
 EndWhile
 
-***main()***
+***main() Pseudocode***
 
 initialize Threshold for the control of the linear distance to 2.0
 
