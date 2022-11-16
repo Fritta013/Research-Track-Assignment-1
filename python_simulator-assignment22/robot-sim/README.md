@@ -9,7 +9,7 @@ The initial set-up look like in the picture below:
 ![Initial Setup!](images/start.png "Start")
 
 The final result or set-up should look like the picture below:
-![Final Setup!](images/final.png "Final")
+![Final Setup!](images/finish.png "Final")
 
 To obtain this result, this Readme file is organized as such: 
 
