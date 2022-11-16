@@ -6,10 +6,10 @@ Some of the arenas and the exercises have been modified for the Research Track I
 
 In this configuration, the robot should arrange the silver and golden tokens such that all silver tokens and placed next to the golden ones.
 The initial set-up look like in the picture below: 
-![Initial Setup!](python_simulator-assignment22/images/start.png "Start")
+![Initial Setup!](/images/start.png "Start")
 
 The final result or set-up should look like the picture below:
-![Final Setup!](python_simulator-assignment22/images/final.png "Final")
+![Final Setup!](/images/final.png "Final")
 
 To obtain this result, this Readme file is organized as such: 
 
