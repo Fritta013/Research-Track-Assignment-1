@@ -156,7 +156,7 @@ For every token seen by robot
      
      input code of token to tcode
    
-   Endif 
+   EndIf 
     
     If distance is higher than dist 
       
@@ -186,7 +186,7 @@ For every token seen by robot
       
       input code of token to tcode
     
-    Endif 
+    EndIf 
     
     If distance is higher than dist 
       
@@ -219,7 +219,7 @@ While check is equal to 0
             
             call turn with speed +10 and delay 1 
         
-        Elif distance of silver token is less than the threshold distance
+        ElIf distance of silver token is less than the threshold distance
             
             print "Found you Mr.Silver!"
             
@@ -235,19 +235,19 @@ While check is equal to 0
                 
                 print "Aww, I'm not close enough."
         
-        Elif the y rotation of silver token is less than the +threshold distance and higher than the -threshold distance
+        ElIf the y rotation of silver token is less than the +threshold distance and higher than the -threshold distance
                 
                 print "Ah, that'll do."
                 
                 call drive with speed of 10 and delay of 0.5
         
-        Elif the y rotation of silver token is less than the -threshold 
+        ElIf the y rotation of silver token is less than the -threshold 
                 
                 print "Left a bit..."
                 
                 call turn with speed of -2 and delay of 0.5
         
-        Elif the y rotation of silver token is higher than the +threshold
+        ElIf the y rotation of silver token is higher than the +threshold
                 
                 print "Right a bit..."
                 
@@ -283,7 +283,7 @@ While check is equal to 0
             
             call turn with speed +10 and delay 1 
         
-        Elif distance of golden token is less than the threshold distance
+        ElIf distance of golden token is less than the threshold distance
             
             print "Found you Mr.Golden!"
             
@@ -291,19 +291,19 @@ While check is equal to 0
             
             add code of the golden token to the list of already organized golden tokens
         
-        Elif the y rotation of golden token is less than the +threshold distance and higher than the -threshold distance
+        ElIf the y rotation of golden token is less than the +threshold distance and higher than the -threshold distance
                 
                 print "Ah, that'll do."
                 
                 call drive with speed of 20 and delay of 0.5
         
-        Elif the y rotation of golden token is less than the -threshold 
+        ElIf the y rotation of golden token is less than the -threshold 
                 
                 print "Left a bit..."
                 
                 call turn with speed of -2 and delay of 0.5
         
-        Elif the y rotation of golden token is higher than the +threshold
+        ElIf the y rotation of golden token is higher than the +threshold
                 
                 print "Right a bit..."
                 
