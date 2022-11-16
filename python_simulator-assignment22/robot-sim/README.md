@@ -150,11 +150,11 @@ For every token seen by robot
     
     If token distance is less than dist and type of token is silver 
      
-     input distance of token to dist 
+      input distance of token to dist 
      
-     input rotation about the Y of token to rot_y
+      input rotation about the Y of token to rot_y
      
-     input code of token to tcode
+      input code of token to tcode
    
    EndIf 
     
@@ -178,7 +178,7 @@ initialize dist to 100
 
 For every token seen by robot
     
-  If token distance is less than dist and type of token is golden 
+    If token distance is less than dist and type of token is golden 
       
       input distance of token to dist 
       
