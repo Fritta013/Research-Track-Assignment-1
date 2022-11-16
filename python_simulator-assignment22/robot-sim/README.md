@@ -118,7 +118,6 @@ Pseudocode
 ### Functions used ### 
 
 The structure of the program is organized as such, with functions and a main block: 
-* `main()`: this is the main loop which calls the functions listed below to arrange the silver and golden tokens such that all silver tokens and placed next to the golden ones
 * `drive()`: drive forward/backward at a specific speed and delay
 * `turn()`: turn right/left at a specific speed and delay
 * `find_silver_token()`: function to find the closest silver token 
