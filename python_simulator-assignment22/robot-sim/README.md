@@ -45,7 +45,7 @@ The simulator requires a Python 2.7 installation, the [pygame](http://pygame.org
 The program is run with:
 
 ```bash
-$ python run.py IH_assignment.py
+$ python2 run.py IH_assignment.py
 ```
 
 Robot API
