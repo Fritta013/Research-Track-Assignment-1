@@ -143,6 +143,7 @@ delay for a set of seconds
 ***find_silver_token()***
 
 initialize dist to 100
+
 For every token seen by robot
     If token distance is less than dist and type of token is silver 
       input distance of token to dist 
