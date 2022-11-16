@@ -8,7 +8,7 @@ In this configuration, the robot should arrange the silver and golden tokens suc
 The initial set-up look like in the picture below: 
 
 
-![Initial Setup!](images/start.png "Start")
+![Initial Setup!](images/first.png "Start")
 
 
 The final result or set-up should look like the picture below:
