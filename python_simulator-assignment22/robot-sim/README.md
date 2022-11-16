@@ -178,7 +178,7 @@ initialize dist to 100
 
 For every token seen by robot
     
-    If token distance is less than dist and type of token is golden 
+  If token distance is less than dist and type of token is golden 
       
       input distance of token to dist 
       
