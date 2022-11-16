@@ -133,11 +133,13 @@ The structure of the program is organized as such, with functions and a main blo
 ***drive() Pseudocode***
 
 drive forward with set speed
+
 delay for a set of seconds
 
 ***turn() Pseudocode***
 
 turn left or right with set speed 
+
 delay for a set of seconds
 
 ***find_silver_token()***
@@ -145,125 +147,230 @@ delay for a set of seconds
 initialize dist to 100
 
 For every token seen by robot
+    
     If token distance is less than dist and type of token is silver 
-      input distance of token to dist 
-      input rotation about the Y of token to rot_y
-      input code of token to tcode
-    Endif 
+     
+     input distance of token to dist 
+     
+     input rotation about the Y of token to rot_y
+     
+     input code of token to tcode
+   
+   Endif 
+    
     If distance is higher than dist 
+      
       input -1 to dist 
+     
       input -1 to rot_y
+      
       input -1 to tcode
+      
       exit function
+    
     EndIf
+
 EndFor
 
 ***find_golden_token()***
 
 initialize dist to 100
+
 For every token seen by robot
+    
     If token distance is less than dist and type of token is golden 
+      
       input distance of token to dist 
+      
       input rotation about the Y of token to rot_y
+      
       input code of token to tcode
+    
     Endif 
+    
     If distance is higher than dist 
+      
       input -1 to dist 
+      
       input -1 to rot_y
+      
       input -1 to tcode
+      
       exit function
+    
     EndIf
+
 EndFor
 
 ***grab_silver_token()***
 
+
 initialize check to 0
+
 While check is equal to 0
+    
     call find_siler_token 
+    
     If code of token is not in the list of already organized silver tokens
+        
         If distance of silver token is equal to -1 
+            
             print "I don't see any SILVER token!!"
+            
             call turn with speed +10 and delay 1 
+        
         Elif distance of silver token is less than the threshold distance
+            
             print "Found you Mr.Silver!"
+            
             If grab call is successful 
+                
                 add code of the silver token to the list of already organized silver tokens
+                
                 print "Gotcha, Silver!, right direction and right orientation"
+                
                 set check to 1 
+            
             Else 
+                
                 print "Aww, I'm not close enough."
+        
         Elif the y rotation of silver token is less than the +threshold distance and higher than the -threshold distance
+                
                 print "Ah, that'll do."
+                
                 call drive with speed of 10 and delay of 0.5
+        
         Elif the y rotation of silver token is less than the -threshold 
+                
                 print "Left a bit..."
+                
                 call turn with speed of -2 and delay of 0.5
+        
         Elif the y rotation of silver token is higher than the +threshold
+                
                 print "Right a bit..."
+                
                 call turn with speed of +2 and delay of 0.5
+        
         EndIf
+    
     Else 
+        
         set check to 0
+        
         call turn with speed of +10 and delay of 1
+        
         print "Silver Token already dealt with, keep looking!"
+    
     EndIf
+
 EndWhile
 
 ***reach_golden_token()***
 
 initialize check to 0
+
 While check is equal to 0
+    
     call find_golden_token 
+    
     If code of token is not in the list of already organized golden tokens
+        
         If distance of golden token is equal to -1 
+            
             print "I don't see any GOLDEN token!!"
+            
             call turn with speed +10 and delay 1 
+        
         Elif distance of golden token is less than the threshold distance
+            
             print "Found you Mr.Golden!"
+            
             set check to 1
+            
             add code of the golden token to the list of already organized golden tokens
+        
         Elif the y rotation of golden token is less than the +threshold distance and higher than the -threshold distance
+                
                 print "Ah, that'll do."
+                
                 call drive with speed of 20 and delay of 0.5
+        
         Elif the y rotation of golden token is less than the -threshold 
+                
                 print "Left a bit..."
+                
                 call turn with speed of -2 and delay of 0.5
+        
         Elif the y rotation of golden token is higher than the +threshold
+                
                 print "Right a bit..."
+                
                 call turn with speed of +2 and delay of 0.5
+        
         EndIf
+    
     Else 
+        
         set check to 0
+        
         call turn with speed of +12 and delay of 1
+        
         print "Golden Token already dealt with, keep looking!"
+    
     EndIf
+
 EndWhile
 
 ***main()***
 
 initialize Threshold for the control of the linear distance to 2.0
+
 initialize Threshold for the control of the orientation to 0.4
+
 initialize silver to True 
+
 initialize round counter to 1 
+
 initialize the total list of silver and golden to 0
+
 initialize check to 0
+
 print "First thing first, lemme get to the center!"
+
 call drive with speed of 200 and delay of 3
+
 While the total list of silver and golden is less than 10 elements 
+    
     call grab_silver_token
+    
     call reach_golden_token
+    
     release token
+    
     print "Token released"
+    
     call drive with speed of -100 and delay of 1.5
+    
     call turn with speed of +4 and delay of 1
+    
     update the total list of silver and golden from the list of already organized golden tokens and from the list of already organized silver tokens
+    
     print the total number of already organized silver tokens at i round 
+    
     print the list of already organized silver tokens at i round 
+    
     print the total number of already organized golden tokens at i round 
+    
     print the list of already organized golden tokens at i round 
+    
     print the total number of already organized tokens
+    
     increment i with 1
+
 EndWhile
+
 print "Mission Accomplished!"
 
 
