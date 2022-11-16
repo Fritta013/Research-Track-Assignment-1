@@ -132,9 +132,9 @@ The structure of the program is organized as such, with functions and a main blo
 
 ***drive() Pseudocode***
 
- drive forward with set speed
+  drive forward with set speed
 
- delay for a set of seconds
+  delay for a set of seconds
 
 ***turn() Pseudocode***
 
