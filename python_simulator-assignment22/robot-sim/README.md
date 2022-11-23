@@ -124,7 +124,7 @@ The structure of the program is organized as such, with functions and a main blo
 * `find_golden_token()`: function to find the closest golden token 
 * `grab_silver_token()`: function to track and grab the silver token
 * `reach_golden_token()`: function to track golden token
-* `main()`: main block, arrange the silver and golden tokens such that all silver tokens and placed next to the golden
+* `main()`: main block, arrange the silver and golden tokens such that all silver tokens are placed next to the golden tokens
 
 ### Functions Pseudocodes ###
 
